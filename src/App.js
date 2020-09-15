@@ -225,7 +225,7 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchField !== this.state.searchField) {
       fetch(
-        `http://www.omdbapi.com/?s=${this.state.searchField}&apikey=4ce50211#`
+        `https://www.omdbapi.com/?s=${this.state.searchField}&apikey=4ce50211#`
       )
         .then((response) => response.json())
         .then((movie) => this.setState({ movies: movie.Search }))
