@@ -1,0 +1,101 @@
+.container-fluid {
+  min-height: 95vh;
+  background: radial-gradient(
+        circle farthest-side at 0% 50%,
+        #fb1 23.5%,
+        rgba(240, 166, 17, 0) 0
+      )
+      21px 30px,
+    radial-gradient(
+        circle farthest-side at 0% 50%,
+        #b71 24%,
+        rgba(240, 166, 17, 0) 0
+      )
+      19px 30px,
+    linear-gradient(
+        #fb1 14%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 85%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(
+        150deg,
+        #fb1 24%,
+        #b71 0,
+        #b71 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #b71 0,
+        #b71 76%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(
+        30deg,
+        #fb1 24%,
+        #b71 0,
+        #b71 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #b71 0,
+        #b71 76%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(90deg, #b71 2%, #fb1 0, #fb1 98%, #b71 0%) 0 0 #fb1;
+  background-size: 40px 60px;
+}
+
+.search-container {
+  min-height: 10rem;
+}
+
+.result {
+  min-height: 80vh;
+}
+
+.row-container {
+  display: grid;
+  justify-content: center;
+}
+
+.movie-container {
+  border: 2px solid purple;
+  border-radius: 5px;
+  margin: 1rem;
+  background-color: #fff;
+}
+
+.image {
+  background-position: top;
+  background-size: contain;
+}
+
+.card {
+  height: 18rem;
+  width: 30rem;
+  padding: 0;
+  background-color: purple;
+  filter: drop-shadow(0px 0px 5px #666);
+}
+
+.mini-card {
+  height: 5rem;
+
+  font-weight: 600;
+  padding: 5px;
+}
+.button-container {
+  padding: 5px;
+}
+.nomination-box {
+  display: grid;
+  justify-content: center;
+  position: sticky;
+  top: 1rem;
+}
+
+.animation {
+  height: 20rem;
+}

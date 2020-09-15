@@ -1,0 +1,19 @@
+.search-box {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 100%;
+  display: block;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
+    border-bottom: 3px solid purple;
+  }
+
+  &::-webkit-input-placeholder {
+    color: darkgrey;
+  }
+}
