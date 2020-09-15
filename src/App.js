@@ -188,7 +188,10 @@ class App extends Component {
                 >
                   <div className="d-flex justify-content-between">
                     <div className="card-title ml-3 mt-3 text-info d">
-                      <h4>You have made 5 nominations already</h4>
+                      <h5>
+                        You have made 5 nominations already, you can no longer
+                        add till you delete
+                      </h5>
                     </div>
                   </div>
                 </div>
