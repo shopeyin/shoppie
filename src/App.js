@@ -369,6 +369,7 @@ class App extends Component {
       <div className="container-fluid b">
         <div className="row search-container d-flex justify-content-center align-items-end">
           <div className="col-md-8">
+            <h1 className="text-center">Shoppie Awards</h1>
             <form onSubmit={handleSubmit}>
               <SearchField
                 name="search"
