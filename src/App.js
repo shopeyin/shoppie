@@ -10,8 +10,6 @@ import { Spinner } from "react-bootstrap";
 
 let items = [];
 
-toast.configure();
-
 class App extends Component {
   constructor() {
     super();
@@ -21,6 +19,7 @@ class App extends Component {
       nominations: [],
       searchField: "",
       disabled: [],
+      message: false,
     };
   }
 
@@ -98,24 +97,19 @@ class App extends Component {
     e.preventDefault();
   };
 
-  notify = () => {
-    toast("You have made 5 nominations already");
-  };
-
   render() {
     const {
       movies,
       nominations,
       disabled,
-      handleSubmit,
+
       searchField,
     } = this.state;
 
     let disableButton;
+
     if (nominations.length === 5) {
       disableButton = true;
-      this.notify();
-      console.log("I was called");
     }
 
     let itemsToRender;
@@ -184,8 +178,22 @@ class App extends Component {
       <div className="container-fluid b">
         <div className="row search-container d-flex justify-content-center align-items-end">
           <div className="col-md-8">
-            <h1 className="text-center">Shoppie Awards</h1>
-            <form onSubmit={handleSubmit}>
+            <h1 className="text-center">
+              Shoppie Awards{" "}
+              {nominations.length === 5 ? (
+                <div id="notification"
+                  className="card mt-3 text-center notification"
+                  style={{ height: "5rem" }}
+                >
+                  <div className="d-flex justify-content-between">
+                    <div className="card-title ml-3 mt-3 text-info d">
+                      <h4>You have made 5 nominations already</h4>
+                    </div>
+                  </div>
+                </div>
+              ) : null}{" "}
+            </h1>
+            <form onSubmit={this.handleSubmit}>
               <SearchField
                 name="search"
                 placeholder="search movies"
@@ -195,7 +203,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row result">
-          <div className="col-md-4 order-md-2 nomination-box ">
+          <div className="col-md-4 order-md-2 nomination-box " id="n">
             <Nominations
               nominations={nominations}
               deleteItem={this.deleteItem}

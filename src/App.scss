@@ -97,6 +97,18 @@
   z-index: 30;
 }
 
+#notification {
+  position: fixed;
+  top: 1rem;
+  right: 5rem;
+  background-color: plum;
+  z-index: 100;
+}
+
 .animation {
   height: 20rem;
+}
+#n {
+  position: sticky;
+  top: 1rem;
 }
