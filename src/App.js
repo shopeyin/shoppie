@@ -181,7 +181,8 @@ class App extends Component {
             <h1 className="text-center">
               Shoppie Awards{" "}
               {nominations.length === 5 ? (
-                <div id="notification"
+                <div
+                  id="notification"
                   className="card mt-3 text-center notification"
                   style={{ height: "5rem" }}
                 >
@@ -203,7 +204,7 @@ class App extends Component {
           </div>
         </div>
         <div className="row result">
-          <div className="col-md-4 order-md-2 nomination-box " id="n">
+          <div className="col-md-4 order-md-2 nomination-box " id="nominate">
             <Nominations
               nominations={nominations}
               deleteItem={this.deleteItem}
